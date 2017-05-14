@@ -64,6 +64,11 @@ section.section {
 	text-align: justify;
 }
 
+section.map {
+	float: left;	
+	margin: 50px
+}
+
 footer.footer, footer.p {
 	height: 75px;
 	margin-left: -20px;
