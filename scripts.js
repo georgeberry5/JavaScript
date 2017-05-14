@@ -24,7 +24,7 @@ function rolloffof(rightside) {
 	rightside.src = "images/rolloff.png";
 }
 
-function contactrealtimeval() {
+function ctrealtval() {
 	var first_name = document.forms["contact"]["first_name"].value;
 	var last_name = document.forms["contact"]["last_name"].value;
 	var email = document.forms["contact"]["email"].value;
@@ -47,7 +47,7 @@ function contactrealtimeval() {
 	}
 }
 
-function contactval() {
+function ctval() {
 	var errormsg = ""
 	var first_name = document.forms["contact"]["first_name"].value;
 	var last_name = document.forms["contact"]["last_name"].value;
@@ -68,33 +68,33 @@ function contactval() {
 	}
 }
 
-function orderval() {
+function orderv() {
 	var errormsg = "selct:";
 	var basenum = document.getElementsByName("base");
-	var isbaseckd = false;
+	var isbasechecked = false;
 	for (var counter = 0; counter < basenum.length; counter++) {
 	if(basenum[counter].checked) {
-	isbaseckd = true;
+	isbasechecked = true;
 	break;
 	}
 	}
-	if (!isbaseckd) 
+	if (!isbasechecked) 
 	{
 	errormsg = errormsg + " a base";
 	}
-	var toppingnum = document.getElementsByName("topp");
-	var istoppingckd = false;
+	var toppingnum = document.getElementsByName("topping");
+	var istoppingchecked = false;
 	for (counter = 0; counter < toppingnum.length; counter++) {
 	if(toppingnum[counter].checked) {
-	istoppingckd = true;
+	istoppingchecked = true;
 	break;
 		}
 	}
-	if (!istoppingckd)
+	if (!istoppingchecked)
 	{
 		errormsg = errormsg + " a topping";
 	}	
-	if (!isbaseckd + !istoppingckd)
+	if (!isbasechecked + !istoppingchecked)
 	{
 		alert(errormsg);
 		return false;

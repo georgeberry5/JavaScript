@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Solent Pizzas</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/png" href="images/favicon.png"> 
+	<script type="text/javascript" src="scripts.js"></script>
+   	</head>
+	<body onload = "time(); date();"> 
+	<header class="header">
+	<img alt="Header Image" src="images/header.png"/> 
+	</header>
+	<nav>
+	<ul>
+	<li> <a href="index.html">Home</a> </li>
+	<li> <a href="order.html">Order</a> </li>
+	<li> <a href="contact.html">Contact</a> </li>
+	</ul>
+	</nav>
+	<aside class="rightside">
+	<a> <img class="rightside" alt="Pizza?" src="images/rolloff.png" onmouseover="rollonto(this)" onmouseout="rolloffof(this)"/> </a>
+	</aside>
+	<section class="section">
+	<h1> Order </h1>
+	<form id="order" name="order" class="ordert" onsubmit="return orderv()">
+	<p> Pizza Bases </p>
+	<input class="base"  onclick="updatetotal()" name="base" type="radio" id="smallbase"> Small Base <span class="price"> £5</span> <br>
+	<input class="base"  onclick="updatetotal()" name="base" type="radio" id="mediumbase"> Medium Base <span class="price"> £7.50</span> <br>	
+	<input class="base"  onclick="updatetotal()" name="base" type="radio" id="largebase"> Large Base <span class="price"> £10</span> <br>
+	<input class="base"  onclick="updatetotal()" name="base" type="radio" id="exlargebase"> Extra Large Base <span class="price"> £12.50</span> <br>
+	<p> Toppings </p>
+	<input class="topping" type="checkbox" onclick="updatetotal()" name="topping" id="cheese"> Cheese <span class="price"> £0.20</span> <br>
+	<p> sides </p>
+	<input class="side" type="checkbox" onclick="updatetotal()" name="side" id="chips"> Chips <span class="price"> £1.50</span> <br>
+	<p> Delivery Info </p>
+	Address Line 1 <input type="text"> <br>
+	Address Line 2 <input type="text"> <br>
+	Postcode <input type="text"> <br>
+	<input type="submit" value="Send" name="send">	
+	</form>
+	</section>	
+	<footer class="footer">
+	<p id="dateout"> </p>
+	<p id="timeout"> </p> 
+	</footer>		
+	</body>
+</html>
